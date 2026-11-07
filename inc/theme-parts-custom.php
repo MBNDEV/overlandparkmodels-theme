@@ -1521,43 +1521,28 @@ function earchi_serie_archive_title() {
 
     $html = '';
     if ( !empty( $earchi_options['earchi_serie_archive_title'] ) || !empty( $earchi_options['earchi_serie_archive_sub_title'] ) || !empty( $earchi_options['earchi_serie_archive_text'] ) ) {
-      $html .= '<div class="row">';
-          $html .= '<div class="col-lg-3">';
-              $html .= '<div class="theme-section-title newpadding_top">';
-                  if ( !empty( $earchi_options['earchi_serie_archive_title'] ) ) {
-                    $html .= '<h1 class="title">' . $earchi_options['earchi_serie_archive_title'] . '</h1>';
-                  }
-                  if ( !empty( $earchi_options['earchi_serie_archive_sub_title'] ) ) {
-                    $html .= '<h6 class="subtitle">' . $earchi_options['earchi_serie_archive_sub_title'] . '<span class="line-one wow animate__animated"></span>';
-                      $html .= '<span class="line-two wow animate__animated"></span>';
-                    $html .= '</h6>';
-                  }
-              $html .= '</div>';
-          $html .= '</div>';
-          $html .= '<div class="col-lg-6 col-md-9 newpadding_top">';
+      $html .= '<div class="forsale-intro">';
+          $html .= '<div class="forsale-intro__text">';
+              if ( !empty( $earchi_options['earchi_serie_archive_title'] ) ) {
+                $html .= '<h1 class="forsale-intro__title">' . $earchi_options['earchi_serie_archive_title'] . '</h1>';
+              }
+              if ( !empty( $earchi_options['earchi_serie_archive_sub_title'] ) ) {
+                $html .= '<h6 class="forsale-intro__subtitle">' . $earchi_options['earchi_serie_archive_sub_title'] . '</h6>';
+              }
               if ( !empty( $earchi_options['earchi_serie_archive_text'] ) ) {
-                $html .= '<div class="project-details">';
-                    $html .= '<p>' . $earchi_options['earchi_serie_archive_text'] . '</p>';
-					if ( !empty( $earchi_options['earchi_serie_archive_button_title'] ) ) {
-					$html .= '<p><a href="'.$earchi_options['earchi_serie_archive_button_url'].'" class=series_bnr_btn>' . $earchi_options['earchi_serie_archive_button_title'] . '</a></p>';
-					}
-                $html .= '</div>';
+                $html .= '<p>' . $earchi_options['earchi_serie_archive_text'] . '</p>';
+              }
+              if ( !empty( $earchi_options['earchi_serie_archive_button_title'] ) ) {
+                $html .= '<p><a href="'.$earchi_options['earchi_serie_archive_button_url'].'" class="series_bnr_btn">' . $earchi_options['earchi_serie_archive_button_title'] . '</a></p>';
               }
           $html .= '</div>';
-		  
-		  /* For Sales Map */
-		   
-		  $html .= '<div class="col-lg-2 col-md-3">';
-              if ( !empty( $earchi_options['earchi_serie_archive_map']['url'] ) ) {
-                $html .= '<div class="project-details-map">';
-				if ( !empty( $earchi_options['earchi_serie_archive_map_txt'] ) ) {
-					$html .= '<div class=maptxt_><p>'.$earchi_options['earchi_serie_archive_map_txt'].'</p></div>';
-				}
-					$html .= '<img src="' . $earchi_options['earchi_serie_archive_map']['url'] . '" alt="' . $earchi_options['earchi_serie_archive_residence_title'] . '">';
-                $html .= '</div>';
-              }
+
+          /* For Sales Map - white outline from the Figma design; the theme-option map image is green-on-white and unreadable here */
+          $html .= '<div class="forsale-intro__map">';
+              $map_txt = !empty( $earchi_options['earchi_serie_archive_map_txt'] ) ? $earchi_options['earchi_serie_archive_map_txt'] : 'Shipping homes to:';
+              $html .= '<p class="forsale-intro__map-title">' . $map_txt . '</p>';
+              $html .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/forsale-shipping-map.svg" alt="Map of the states we ship homes to: WA, OR, CA, ID, NV, MT, WY, UT, AZ, CO, NM, ND, SD, NE, KS, OK and TX" width="453" height="420">';
           $html .= '</div>';
-		  
       $html .= '</div>';
     }
 
