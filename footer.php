@@ -9,7 +9,7 @@ include( get_stylesheet_directory() . '/inner-contact-section.php' );
 	</style>
 	<div class=octoform>
 		<?php
-			if(is_page(268) || is_page(7443)){
+			if(is_page(8087) || is_page(7443)){
 				echo do_shortcode('[emailoctopus form_id="8c68bd00-52db-11f0-85ee-df0cfd1d87bb"]');
 			}
 		?>
@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 	</div>
+	</section>
+	<?php /* 
 	<?php if(!is_page(7443)){ ?>
     <div class="theme-section-title desktop-center black">
         <h3 class="subtitle">
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 	<?php } ?>
 </section>
+*/ ?>
 <?php global $earchi_options; ?>
 <?php wp_footer(); ?>
 

@@ -210,3 +210,17 @@ add_action( 'wp_footer', 'wpdocs_mbn_footer');
 //add_action( 'wp_head', 'wpdocs_mbn_header');
 
 require_once( get_stylesheet_directory() . '/greviews.php' );
+
+/* =====================================================================
+ * MOSS TOPBAR (Figma "Promo Bar", node 3426:6268) — FONT
+ * Loads Roboto Condensed Bold used by the topbar.
+ * ===================================================================== */
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_style(
+		'moss-topbar-font',
+		'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap',
+		array(),
+		null
+	);
+} );
+/* ===== MOSS TOPBAR FONT — END ===== */
