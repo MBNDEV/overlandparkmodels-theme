@@ -65,6 +65,8 @@ p{font-size:16px;line-height:1.6;word-break: auto-phrase;}
 .social-icon.footer li{border:0!important;}
 .footer-widget .social-icon li a{color:#16914E!important;font-size:22px!important;}
 .footer-widget .social-icon li a:hover{color:#000!important;}
+.footer_social_reviews{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer_social_reviews .social-icon.footer{margin:0;}
 .copyright-area{background:#16914E!important;border-top:0!important;padding: 35px 0px!important;justify-content:center!Important;}
 .copyright-area .copyright-area-inner p{color:#fff!important;margin:0!Important;}
 .copyright-area .copyright-area-inner{padding:0 10px;}
@@ -72,7 +74,7 @@ p{font-size:16px;line-height:1.6;word-break: auto-phrase;}
 .navbar-area.navigation-style-02 .btn-wrap .boxed-btn{border-color:#fff!important;color:#fff!important;}
 .navbar-area.navigation-style-02 .btn-wrap .boxed-btn:hover{background:transparent!important;}
 .navigation-style-02 .custom-container .nav-right-content .btn-wrap .boxed-btn{padding: 12px 12px 9px;letter-spacing: 2px;}
-.navigation-style-02 .custom-container .nav-right-content .btn-wrap .boxed-btn svg{margin-left:0;margin-right:1px}
+.navigation-style-02 .custom-container .nav-right-content .btn-wrap .boxed-btn svg{margin-left:0;margin-right:1px;display:none;}
 .navbar-area.navigation-style-02 .custom-container .nav-right-content{margin-top:-10px;}
 
 .breadcrumbs ul li + li::before{color:#16914E!important;}
@@ -1268,3 +1270,342 @@ p{font-size:16px;line-height:1.6;word-break: auto-phrase;}
 	.forsale-intro__text p{font-size:16px;}
 	.forsale-intro .forsale-intro__map-title{font-size:20px;}
 }
+/* Main menu: 14px uppercase */
+#earchi_main_menu .navbar-nav li a {
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+}
+
+/* =====================================================================
+ * MOSS TOPBAR (Figma "Promo Bar", node 3426:6268) — START
+ * Markup: earchi-child/inc/theme-parts-custom.php (MOSS TOPBAR block)
+ * Font:   earchi-child/functions.php (MOSS TOPBAR FONT block)
+ * Image:  Media Library "Moss topbar promo tag" (ID 7762)
+ * Overrides the old ".hp_header_wrap .top_section" rules in custom.css.
+ * ===================================================================== */
+.hp_header_wrap .top_section.moss-topbar {
+	background: #066a34;
+	padding: 9px 20px !important;
+	text-align: left;
+}
+.hp_header_wrap .moss-topbar .moss-topbar__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+/* Shared text style: Roboto Condensed Bold, uppercase */
+.hp_header_wrap .moss-topbar .moss-topbar__promo-text,
+.hp_header_wrap .moss-topbar .moss-topbar__item {
+	font-family: "Roboto Condensed", "Roboto", Arial, sans-serif;
+	font-weight: 700;
+	line-height: 1.5;
+	text-transform: uppercase;
+	white-space: nowrap;
+	margin: 0;
+}
+
+/* Promo tag: tag graphic + white label box */
+.hp_header_wrap .moss-topbar .moss-topbar__promo {
+	position: relative;
+	flex-shrink: 0;
+	width: 403px;
+	height: 34px;
+	margin: 0;
+	background: url("/wp-content/uploads/2026/11/moss-promo-tag-2026-10-20-21-21-40-453323-2026-11-06_21-31-04_153888.webp") no-repeat 0 0 / 174px 34px;
+}
+.hp_header_wrap .moss-topbar .moss-topbar__promo-text {
+	position: absolute;
+	top: 0;
+	left: 80px;
+	width: 323px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 23px;
+	background: #fff;
+	color: #066a34;
+	font-size: 13px;
+	letter-spacing: 1.54px;
+}
+
+/* Right-side items */
+.hp_header_wrap .moss-topbar .moss-topbar__item {
+	flex-shrink: 0;
+	padding: 4px 24px;
+	color: #e7e2d4;
+	font-size: 14px;
+	letter-spacing: 0.96px;
+	text-decoration: none;
+}
+.hp_header_wrap .moss-topbar .moss-topbar__item--divider {
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.hp_header_wrap .moss-topbar .moss-topbar__phone {
+	padding-right: 0;
+	color: #fff;
+}
+.hp_header_wrap .moss-topbar .moss-topbar__phone:hover,
+.hp_header_wrap .moss-topbar .moss-topbar__phone:focus {
+	color: #e7e2d4;
+}
+
+/* Responsive (not in Figma — keeps the bar at 52px tall) */
+@media (max-width: 1319px) {
+	.hp_header_wrap .moss-topbar .moss-topbar__item {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	.hp_header_wrap .moss-topbar .moss-topbar__phone {
+		padding-right: 0;
+	}
+	.hp_header_wrap .moss-topbar .moss-topbar__item--tagline {
+		flex: 1 1 auto;
+		min-width: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		white-space: normal;
+		text-align: center;
+		line-height: 1.3;
+	}
+}
+@media (max-width: 1079px) {
+	.hp_header_wrap .moss-topbar .moss-topbar__item--tagline {
+		display: none;
+	}
+	.hp_header_wrap .moss-topbar .moss-topbar__item--family {
+		border-left: 0;
+	}
+}
+@media (max-width: 819px) {
+	.hp_header_wrap .moss-topbar .moss-topbar__item--family {
+		display: none;
+	}
+	.hp_header_wrap .moss-topbar .moss-topbar__phone {
+		border-left: 0;
+	}
+}
+@media (max-width: 575px) {
+	.hp_header_wrap .moss-topbar .moss-topbar__inner {
+		justify-content: center;
+	}
+	.hp_header_wrap .moss-topbar .moss-topbar__phone {
+		display: none;
+	}
+	.hp_header_wrap .moss-topbar .moss-topbar__promo {
+		width: 100%;
+		max-width: 403px;
+	}
+	.hp_header_wrap .moss-topbar .moss-topbar__promo-text {
+		width: calc(100% - 80px);
+		padding: 0 12px;
+		justify-content: center;
+		text-align: center;
+		white-space: normal;
+		line-height: 1.2;
+	}
+}
+/* ===== MOSS TOPBAR — END ===== */
+
+
+/* =====================================================================
+ * MOSS HEADER CONTAINER WIDTHS — START
+ * Topbar + nav share the same content width:
+ *   below 1920px -> 1320px, 1920px and up -> 1440px
+ * .nav-container has 15px side padding, so its max-width is content + 30px.
+ * ===================================================================== */
+.hp_header_wrap .nav-container.custom-container {
+	max-width: calc(1320px + 30px);
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: 1920px) {
+	.hp_header_wrap .moss-topbar .moss-topbar__inner {
+		max-width: 1440px;
+	}
+	.hp_header_wrap .nav-container.custom-container {
+		max-width: calc(1440px + 30px);
+	}
+}
+/* ===== MOSS HEADER CONTAINER WIDTHS — END ===== */
+
+
+/* fix-greentopbarcutoff-and-desktopmenu-11-6-2026 */
+@media (min-width: 992px) and (max-width: 1099px) {
+  .hp_header_wrap .navbar-nav > li > a {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    letter-spacing: 1px !important;
+  }
+  .hp_header_wrap .nav-container .logo-wrapper img { max-width: 220px; height: auto; }
+}
+@media (max-width: 1079px) {
+  .hp_header_wrap .moss-topbar .moss-topbar__item {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 13px;
+    letter-spacing: .5px;
+  }
+  .hp_header_wrap .moss-topbar .moss-topbar__phone { padding-right: 0; }
+}
+@media (max-width: 767px) {
+  .story_carousel .elementor-swiper-button-prev { left: -12px !important; inset-inline-start: -12px !important; }
+  .story_carousel .elementor-swiper-button-next { right: -12px !important; inset-inline-end: -12px !important; }
+}
+/* end fix-greentopbarcutoff-and-desktopmenu-11-6-2026 */
+
+/* =====================================================================
+ * NAV — ported from staging3 Additional CSS (2026-11-07)
+ * Paste at the END of live: Appearance > Customize > Additional CSS
+ * ===================================================================== */
+
+/* Main menu: 14px uppercase, spaced */
+#earchi_main_menu .navbar-nav li a {
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+	padding: 16px 14px;
+	font-weight: 600;
+	line-height: 120%; /* 16.8px */
+	letter-spacing: 1.4px;
+}
+.navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li {
+    margin-left: 0 !important;
+}
+.navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav{
+	margin-bottom: 0 !important
+}
+.navbar-area.navigation-style-02 .custom-container {
+    padding: 16px 15px !important;
+}
+#hp_header_wrap nav{
+	border-bottom: 1px solid var(--border-default, #E2DED1);
+}
+.logo-wrapper .logo img {
+    max-width: 259px;
+		height: auto;
+}
+
+/* Nav dropdown caret – matches Figma "Nav Link / Dropdown=True" */
+@media (min-width: 992px) {
+  .navbar-nav > li.menu-item-has-children > a::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    vertical-align: baseline;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    transform: translateY(-2.5px);
+    transition: transform 0.2s ease;
+  }
+  .navbar-nav > li.menu-item-has-children:hover > a::after,
+  .navbar-nav > li.menu-item-has-children:focus-within > a::after {
+    transform: translateY(-2.5px) rotate(-90deg);
+  }
+}
+
+/* ===== MOSS MOBILE MENU (below 992px) — START ===== */
+@media (max-width: 991.98px) {
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse {
+		background: #fff !important;
+		border-top: 1px solid rgba(29, 36, 25, 0.12);
+		margin-top: 12px;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse.show {
+		max-height: calc(100vh - 140px);
+		overflow-y: auto;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse.show::-webkit-scrollbar {
+		display: none;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav {
+		background: #fff !important;
+		margin: 0 !important;
+		padding: 4px 0 16px !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav > li {
+		padding: 0 !important;
+		border: 0 !important;
+		border-bottom: 1px solid rgba(29, 36, 25, 0.12) !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav > li > a {
+		padding: 16px 56px 16px 4px !important;
+		color: #1d2419 !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav > li.active > a,
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav > li > a:hover {
+		color: #066a34 !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li .submenu-button {
+		top: 0 !important;
+		right: 0 !important;
+		width: 48px !important;
+		height: 49px !important;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		font-size: 0 !important;
+		color: #1d2419 !important;
+		background: transparent !important;
+		border: 0 !important;
+		transform: none !important;
+		rotate: none !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li .submenu-button::before {
+		display: none !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li .submenu-button::after {
+		content: "" !important;
+		display: block !important;
+		width: 0 !important;
+		height: 0 !important;
+		border-left: 5px solid transparent !important;
+		border-right: 5px solid transparent !important;
+		border-top: 6px solid currentColor !important;
+		rotate: none !important;
+		transition: transform 0.2s ease;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li.active > .submenu-button {
+		color: #066a34 !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li.active > .submenu-button::after {
+		transform: rotate(180deg);
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu {
+		margin: 0 0 0 4px !important;
+		padding: 0 0 0 16px !important;
+		max-height: none !important;
+		overflow: hidden !important;
+		border: 0 !important;
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li {
+		border: 0 !important;
+		border-left: 2px solid #066a34 !important;
+		margin-left: -16px !important;
+		padding: 0 0 0 16px !important;
+		background: transparent !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:last-child {
+		margin-bottom: 12px !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a {
+		background: transparent !important;
+		padding: 10px 4px !important;
+		font-size: 13px !important;
+		letter-spacing: 1.2px !important;
+		color: #1d2419 !important;
+	}
+	.hp_header_wrap .navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a:hover {
+		color: #066a34 !important;
+	}
+}
+/* ===== MOSS MOBILE MENU — END ===== */
