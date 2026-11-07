@@ -1238,3 +1238,33 @@ p{font-size:16px;line-height:1.6;word-break: auto-phrase;}
 		height: auto;
 	}
 }
+
+
+/* For Sale intro + shipping map (Figma 3748:3918) */
+.forsale-intro{display:flex;background:#16914E;margin-bottom:40px;}
+.forsale-intro__text{position:relative;flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:20px;padding:80px 60px;overflow:hidden;color:#fff;}
+.forsale-intro__text::before{content:"";position:absolute;inset:0;background:url(images/forsale-intro-bg.png) center/cover no-repeat;mix-blend-mode:multiply;opacity:.1;pointer-events:none;}
+.forsale-intro__text > *{position:relative;margin:0!important;}
+/* .innerhed_ prefix + !important beats the theme's .innerhed_ h1 Roboto/40px override */
+.innerhed_ .forsale-intro .forsale-intro__title{font-family:'Syne',sans-serif!important;font-size:36px!important;font-weight:700;line-height:1.2!important;text-transform:uppercase;color:#fff;max-width:517px;}
+.forsale-intro .forsale-intro__subtitle{color:#fff;}
+.forsale-intro__text p{font-family:'Roboto',sans-serif;font-size:18px;line-height:1.68!important;color:#fff;}
+.forsale-intro__map{flex:0 0 513px;display:flex;flex-direction:column;justify-content:center;background:#066A34;padding:40px 0 20px 60px;}
+.forsale-intro .forsale-intro__map-title{font-family:'Roboto',sans-serif;font-size:24px;font-weight:600;line-height:1.2!important;color:#fff;margin:0;}
+.forsale-intro__map img{display:block;width:100%;height:auto;}
+@media (max-width: 1199px){
+	.forsale-intro__map{flex-basis:420px;padding-left:40px;}
+	.forsale-intro__text{padding:60px 40px;}
+}
+@media (max-width: 991px){
+	.forsale-intro{flex-direction:column;}
+	.forsale-intro__text{flex:none;}
+	.forsale-intro__map{flex-basis:auto;padding:30px 24px;align-items:center;}
+	.forsale-intro__map-title,.forsale-intro__map img{width:100%;max-width:453px;}
+}
+@media (max-width: 767px){
+	.forsale-intro__text{padding:40px 24px;}
+	.innerhed_ .forsale-intro .forsale-intro__title{font-size:28px!important;}
+	.forsale-intro__text p{font-size:16px;}
+	.forsale-intro .forsale-intro__map-title{font-size:20px;}
+}
