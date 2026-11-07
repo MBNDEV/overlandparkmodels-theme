@@ -104,10 +104,11 @@ function earchi_header_one_home() {
     $html = '';
     $html .= '<header id="hp_header_wrap" class="header-style-0' . $header_style . ' hp_header_wrap">';
       $html .= '<nav class="navbar navbar-area navbar-expand-lg navigation-style-0' . $nav_style . ' ' . $dark_header_three . ' ' . $header_style_v2 . '" ' . $header_background . '>';
-      $html .= '<div class=top_section><div class="custom-top-banner">';
-      $html .= '<div class="top-banner-left"><p><span class=topimgbg_><span class=toptxtwrap_>'.get_field("topcontent_text",1881).'</span></span></p><p>'.get_field("topcontent_text2",1881).'</p></div>';
-      // $html .= '<div class="ggreviews">' . do_shortcode('[trustindex no-registration="google"]') . '</div>';
-      $html .= '<div class="ggreviews">' . do_shortcode('[earchi_greviews]') . '</div>';
+      $html .= '<div class="top_section moss-topbar"><div class="moss-topbar__inner">';
+      $html .= '<p class="moss-topbar__promo"><span class="moss-topbar__promo-text">' . get_field("topcontent_text", 1881) . '</span></p>';
+      $html .= '<p class="moss-topbar__item moss-topbar__item--tagline">' . get_field("topcontent_text2", 1881) . '</p>';
+      $html .= '<p class="moss-topbar__item moss-topbar__item--divider moss-topbar__item--family">Family owned &amp; operated since 1971</p>';
+      $html .= '<a class="moss-topbar__item moss-topbar__item--divider moss-topbar__phone" href="tel:+18666097351">(866) 609-7351</a>';
       $html .= '</div></div>';        
          $html .= '<div class="container custom-container nav-container">';
             $html .= '<div class="responsive-menu">';
@@ -819,6 +820,7 @@ $query = new WP_Query( $args );
                         $html .= '</div>';
                       }
 					*/
+					$html .= '<div class="footer_social_reviews">';
                     if ( !empty( $socials ) ) {
 					  $html .= '<ul class="social-icon footer">';
 						foreach ( $socials as $social ) {
@@ -826,6 +828,8 @@ $query = new WP_Query( $args );
 						}
 					  $html .= '</ul>';
 					}
+					$html .= '<div class="ggreviews footer_greviews">' . do_shortcode('[earchi_greviews hide_count="true"]') . '</div>';
+					$html .= '</div>';
                   $html .= '</div>';
                 $html .= '</div>';
               }

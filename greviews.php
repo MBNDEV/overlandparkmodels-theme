@@ -76,12 +76,13 @@ function earchi_greviews_simple_shortcode($atts = array()) {
     $atts = shortcode_atts(
         array(
             'islcp' => false,
+			'hide_count' => false,
         ),
         $atts ?? array(),
         'earchi_greviews'
     );
 
-    $is_lcp = filter_var($atts['islcp'], FILTER_VALIDATE_BOOLEAN);
+	$is_lcp = filter_var($atts['islcp'], FILTER_VALIDATE_BOOLEAN);	$hide_count = filter_var($atts['hide_count'], FILTER_VALIDATE_BOOLEAN);
 
     $loading = $is_lcp ? 'lazy' : 'eager';
     
@@ -153,12 +154,7 @@ function earchi_greviews_simple_shortcode($atts = array()) {
                     }
                     ?>
                 </div>
-                <div class="greviews-rating-text">
-                    based on
-                    <span>
-                        <?php echo esc_html(isset($result['data']['result']['user_ratings_total']) ? $result['data']['result']['user_ratings_total'] : '0'); ?> reviews
-                    </span>
-                </div>
+				<?php if (!$hide_count) : ?>                <div class="greviews-rating-text">                    based on                    <span>                        <?php echo esc_html(isset($result['data']['result']['user_ratings_total']) ? $result['data']['result']['user_ratings_total'] : '0'); ?> reviews                    </span>                </div>                <?php endif; ?>
             </div>
         </a>
     </div>
