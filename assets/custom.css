@@ -1609,3 +1609,17 @@ p{font-size:16px;line-height:1.6;word-break: auto-phrase;}
 	}
 }
 /* ===== MOSS MOBILE MENU — END ===== */
+
+/* Floor plan thumbnails: show the whole plan, no cropping */
+.floorplan_wrap .floorplan_items .thumbnail {
+  height: auto;
+}
+.floorplan_wrap .floorplan_items a {
+  height: auto;
+  max-height: none;
+}
+.floorplan_wrap .floorplan_items .thumbnail img {
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
