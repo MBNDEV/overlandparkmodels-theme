@@ -224,3 +224,18 @@ add_action( 'wp_enqueue_scripts', function () {
 	);
 } );
 /* ===== MOSS TOPBAR FONT — END ===== */
+
+/* =====================================================================
+ * SEO — remove Yoast rel="next"/rel="prev" on the Malibu and Sedona
+ * series pages (/series/malibu/, /series/sedona/). Teamwork #44112697.
+ * ===================================================================== */
+function opm_is_series_without_pagination_links() {
+    return is_tax( 'seriestax', array( 'malibu', 'sedona' ) );
+}
+
+function opm_remove_series_rel_link( $link ) {
+    return opm_is_series_without_pagination_links() ? false : $link;
+}
+add_filter( 'wpseo_next_rel_link', 'opm_remove_series_rel_link' );
+add_filter( 'wpseo_prev_rel_link', 'opm_remove_series_rel_link' );
+/* ===== SEO REL NEXT/PREV — END ===== */
